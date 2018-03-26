@@ -1,3 +1,7 @@
+**Web Tutorial about Syntax:**
+
+	https://www.w3schools.com/sql/sql_syntax.asp
+
 **Installation on Raspberry Pi:**
 	
 	sudo apt-get install mysql-server python-mysqldb
@@ -28,4 +32,11 @@ Log in as root:
 Reset password:
 
 	UPDATE mysql.user SET authentication_string = PASSWORD('NEWPSW') WHERE User = 'root' AND Host = 'localhost';
+	
+Restart the MySQL server normally:
+
+	sudo kill $(sudo cat /var/run/mysqld/mysqld.pid)
+	sudo systemctl start mysql
+	
+
 	

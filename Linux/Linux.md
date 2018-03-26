@@ -33,3 +33,14 @@ Depends on ssh version, might still need to:
 
 	tar [-C /myfolder] -zxvf yourfile.tar.gz 
 	
+**How to automatically choose defaults when running commands:**
+
+*yes* command will repeatedly output a line with string input, therefore in these case it is like hitting enter for all choices.
+
+	yes "" | YOUR COMMAND
+	
+**Run sudo jobs in crontab:**
+
+Use the root crontab instead of individual crontab:
+
+	sudo crontab

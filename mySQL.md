@@ -55,5 +55,10 @@ sudo kill $(sudo cat /var/run/mysqld/mysqld.pid)
 sudo systemctl start mysql
 ~~~
 	
+**Delete All data in a MySQL Table**
+
+~~~sql
+TRUNCATE TABLE tablename;
+~~~
 
 	

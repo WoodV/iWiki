@@ -4,16 +4,22 @@ Generate rsa key pair
 
 (will create a folder /home/a/.ssh)
 
-	ssh-keygen -t rsa 
+~~~bash
+ssh-keygen -t rsa 
+~~~
 
 Create a ~/.ssh folder on the remote workstation
 
-	ssh b@B mkdir -p .ssh
+~~~bash
+ssh b@B mkdir -p .ssh
+~~~
 
 Append public key to remote workstation
 
-	cat .ssh/id_rsa.pub | ssh name@server 'cat >> .ssh/authorized_keys'
-	
+~~~bash
+cat .ssh/id_rsa.pub | ssh name@server 'cat >> .ssh/authorized_keys'
+~~~
+
 Depends on ssh version, might still need to:
 
 (Optional)
@@ -28,19 +34,28 @@ Depends on ssh version, might still need to:
 
 .tar
 
-	tar [-C /myfolder] -xvf yourfile.tar 
+~~~bash
+tar [-C /myfolder] -xvf yourfile.tar 
+~~~
+
 .tar.gz
 
-	tar [-C /myfolder] -zxvf yourfile.tar.gz 
-	
+~~~bash
+tar [-C /myfolder] -zxvf yourfile.tar.gz 
+~~~
+
 **How to automatically choose defaults when running commands:**
 
 *yes* command will repeatedly output a line with string input, therefore in these case it is like hitting enter for all choices.
 
-	yes "" | YOUR COMMAND
-	
+~~~bash
+yes "" | YOUR COMMAND
+~~~
+
 **Run sudo jobs in crontab:**
 
 Use the root crontab instead of individual crontab:
 
-	sudo crontab
+~~~bash
+sudo crontab
+~~~

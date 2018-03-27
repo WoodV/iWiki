@@ -59,3 +59,11 @@ Use the root crontab instead of individual crontab:
 ~~~bash
 sudo crontab
 ~~~
+
+**Show All process:**
+
+~~~bash
+ps aux
+~~~
+
+`ps` will only show process currently opened by this bash

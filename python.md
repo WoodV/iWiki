@@ -20,7 +20,7 @@ keyHash = hashlib.pbkdf2_hmac('sha256', pwd, salt, 100000)
 hashValue = binascii.hexlify(keyHash)
 ~~~
 
-#####Tornado
+###Tornado
 
 **Connect to MySQL:**
 

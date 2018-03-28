@@ -20,7 +20,21 @@ keyHash = hashlib.pbkdf2_hmac('sha256', pwd, salt, 100000)
 hashValue = binascii.hexlify(keyHash)
 ~~~
 
-###Tornado
+###[Tornado](http://www.tornadoweb.org/en/stable/guide/security.html?highlight=login)
+
+**Using Secret Token to anti-XSRF:**
+
+Within `settings` under `class Application(tornado.web.Application)`, set `xsrf_cookies=True`.
+
+Then, within each form need to submit:
+
+~~~
+<form action="/new_message" method="post">
+  {% module xsrf_form_html() %}
+  <input type="text" name="message"/>
+  <input type="submit" value="Post"/>
+</form>
+~~~
 
 **Connect to MySQL:**
 

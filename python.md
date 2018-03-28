@@ -57,5 +57,38 @@ data = self.db.query("SELECT col1, col2 \
                    WHERE para = %s", input)
 ~~~
 
+**Form Filds Validation:**
+
+Use python [wtform](http://wtforms.readthedocs.io/en/stable/) and [wtforms-tornado](https://github.com/puentesarrin/wtforms-tornado) packages.
+
+~~~bash
+pip install wtform wtforms-tornado
+~~~
+
+~~~python
+from wtforms import TextField
+from wtforms.validators import Required, Email
+from wtforms_tornado import Form
+
+class SignUpForm(Form):
+    email = TextField('Email', validators=[Required(), Email()])
+
+class SignupHandler(BaseHandler):
+    def get(self):
+    	form = SignUpForm()
+        self.render("signup.html", email=form.email)
+	
+    def post(self):
+        form = SignUpForm(self.request.arguments)
+        if form.validate():
+            email = form.data['email']
+	else:
+            self.set_status(400)
+            self.write(form.errors)
+            return
+~~~
+
+
+
 
 

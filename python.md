@@ -20,7 +20,7 @@ keyHash = hashlib.pbkdf2_hmac('sha256', pwd, salt, 100000)
 hashValue = binascii.hexlify(keyHash)
 ~~~
 
-###[Tornado](http://www.tornadoweb.org/en/stable/guide/security.html?highlight=login)
+### [Tornado](http://www.tornadoweb.org/en/stable/guide/security.html?highlight=login)
 
 **Using Secret Token to anti-XSRF:**
 

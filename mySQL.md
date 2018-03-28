@@ -61,4 +61,9 @@ sudo systemctl start mysql
 TRUNCATE TABLE tablename;
 ~~~
 
-	
+**Export Database from MySQL:**
+
+~~~bash
+mysqldump -u [username] -p [databasename] > [dumpfilename.sql]
+~~~
+

@@ -24,7 +24,7 @@ Stop the current mysql server:
 sudo service mysqld stop
 ~~~
 
-(?):
+If /var/run/mysqld not exist:
 	
 ~~~bash
 sudo mkdir /var/run/mysqld; sudo chown mysql /var/run/mysqld
@@ -46,6 +46,12 @@ Reset password:
 
 ~~~sql
 UPDATE mysql.user SET authentication_string = PASSWORD('NEWPSW') WHERE User = 'root' AND Host = 'localhost';
+~~~
+
+Reload grant table:
+
+~~~bash
+mysqladmin flush-privileges
 ~~~
 	
 Restart the MySQL server normally:

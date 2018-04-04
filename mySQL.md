@@ -1,6 +1,9 @@
+**[Documentation](https://dev.mysql.com/doc/)**
+
 **Web Tutorial about Syntax:**
 
 	https://www.w3schools.com/sql/sql_syntax.asp
+
 
 **Installation on Raspberry Pi:**
 	
@@ -73,3 +76,33 @@ TRUNCATE TABLE tablename;
 mysqldump -u [username] -p [databasename] > [dumpfilename.sql]
 ~~~
 
+**Import Database to MySQL:**
+
+~~~bash
+mysql -u username -p database_name < file.sql
+~~~
+
+**Adding User:**
+
+[meaning]
+
+~~~sql
+CREATE USER "jianjian"@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *[database].*[table] TO 'jianjian'@'localhost' WITH GRANT OPTION;
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
+    ->     ON expenses.*
+    ->     TO 'custom'@'localhost';
+~~~
+
+**Drop User:**
+
+~~~sql
+DROP USER 'jianjian'@'localhost';
+~~~
+
+**Change User Password:**
+
+~~~sql
+set password for 'webstore'@'localhost' = password('password');
+~~~

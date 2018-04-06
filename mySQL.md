@@ -106,3 +106,14 @@ DROP USER 'jianjian'@'localhost';
 ~~~sql
 set password for 'webstore'@'localhost' = password('password');
 ~~~
+
+**Load csv File into MySQL:**
+
+~~~sql
+LOAD DATA LOCAL INFILE 'abc.csv' IN TO TABLE abc 
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(col1, col2, col3, ...);
+~~~

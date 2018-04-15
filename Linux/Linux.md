@@ -108,3 +108,16 @@ Decrypt:
 openssl rsautl -decrypt -oaep -inkey ~/.ssh/id_rsa -in secret.key.enc -out secret.key
 openssl aes-256-cbc -d -in secretfile.txt.enc -out secretfile.txt -pass file:secret.key
 ~~~
+
+**GNU Screen:**
+
+~~~bash
+screen #open screen
+<ctr+a> : #horizontal split
+<ctr+a> | #vertical split
+<ctr+a> X #delete current
+<ctr+a> tab #switch among screen
+<ctr+a> c #create a shell in the screen
+<ctr+a> Q #delete all screen except current one
+~~~
+

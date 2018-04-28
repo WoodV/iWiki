@@ -10,6 +10,30 @@ for t in tuples:
 	files += t[2]
 ~~~
 
+**url encode and decode**
+
+~~~python
+import urllib
+import urlparse
+d = {'a':'b', 'c':'d'}
+s = urllib.urlencode(d) #s = 'a=b&c=d'
+d1 = urlparse.parse_qs(s) #d1 = d
+~~~
+
+**Retrieve an element from a set without removing it**
+
+~~~python
+e = next(iter(s))
+~~~
+
+**Generate a random string**
+
+~~~python
+import string
+import random
+randomS = ''.join([random.choice(string.ascii_letters + string.digits) for n in xrange(8)]) #string.ascii_uppercase
+~~~
+
 **Handling Salted Hashed Passwords:**
 
 ~~~python

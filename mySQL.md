@@ -11,6 +11,18 @@
 sudo apt-get install mysql-server python-mysqldb
 ~~~
 
+**Create table**
+
+~~~sql
+CREATE TABLE tablename (
+    column1 varchar(255),
+    column2 int
+);
+~~~
+
+
+
+
 **Check mySQL status:**
 
 ~~~bash

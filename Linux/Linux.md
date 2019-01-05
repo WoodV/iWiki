@@ -28,6 +28,22 @@ Depends on ssh version, might still need to:
 	.ssh to 700
 	.ssh/authorized_keys2 to 640
 	
+*`ssh -v user@website` can be used to debug.*
+
+**Add additional identity to ssh**
+
+suggest we have another rsa private key: id2_rsa:
+
+~~~
+mv id2_rsa ~/.ssh/
+cd ~/.ssh
+chmod 600 id2_rsa
+ssh-add id2_rsa
+~~~
+
+
+
+
 **Unzip .tar or .tar.gz File:**
 
 [to specific folder]
@@ -121,3 +137,9 @@ screen #open screen
 <ctr+a> Q #delete all screen except current one
 ~~~
 
+**Grant a user sudo privilege:**
+
+~~~bash
+su
+usermod -aG sudo USERNAME
+~~~        

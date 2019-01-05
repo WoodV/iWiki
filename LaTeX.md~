@@ -80,7 +80,7 @@ Actual text starts from `\begin{document}`, everything above that are _preambles
 
 ##### Images & Figures
 
-Use `figure` environment and 
+Use `figure` environment and `graphicx` package.
 
 #### Useful Commands:
 
